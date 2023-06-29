@@ -1,0 +1,158 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.App {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  min-height: 500px;
+  background: #3d7ad6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game-conatiner {
+  z-index: 1;
+}
+
+.board {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 350px;
+  height: 350px;
+  flex-shrink: 0;
+  margin: 0 auto;
+  /* margin-top: 30px; */
+
+  border-radius: 20px;
+  border: 10px solid #000;
+  background: #fff;
+  padding: 10px;
+}
+
+.square {
+  width: 90px;
+  height: 90px;
+  font-size: 40px;
+  border: 4px solid #000000;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #c9f9fc;
+  padding: 0;
+}
+
+.back-xo-container {
+  position: absolute;
+}
+.back-xo {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.back-svg {
+  position: absolute;
+}
+.left-top {
+  left: 100px;
+}
+.right-top {
+  right: 100px;
+}
+.right-bottom {
+  left: 100px;
+  bottom: 100px;
+}
+.left-bottom {
+  right: 100px;
+  bottom: 100px;
+}
+
+.reset-button {
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+.square.winning-square {
+  background-color: #aefaa1; /* Change this color to your desired highlight color */
+}
+
+.winning-line {
+  position: absolute;
+  background-color: #aefaa1; /* Change this color to your desired line color */
+  border-radius: 3px;
+}
+
+.horizontal-line {
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+
+.vertical-line {
+  top: 0;
+  left: 40px;
+  width: 10px;
+  height: 100%;
+}
+
+.diagonal-line.left {
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  transform: rotate(45deg);
+}
+
+.diagonal-line.right {
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  transform: rotate(-45deg);
+}
+
+.game {
+  position: relative;
+  z-index: 2;
+}
+.center-logo {
+  width: 526px;
+  height: 526px;
+  flex-shrink: 0;
+
+  border-radius: 526px;
+  background: #23acf9;
+  filter: blur(83px);
+}
+
+.center-logo,
+.game-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
